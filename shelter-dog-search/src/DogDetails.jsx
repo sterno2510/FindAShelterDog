@@ -7,7 +7,7 @@ const FrameContainer = styled.div`
   border-radius: 15px;
   padding: 20px;
   margin: 20px;
-  background-color: #fff8dc !important;
+  background-color: #fbeaa6 !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 `;
 

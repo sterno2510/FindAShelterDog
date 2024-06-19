@@ -8,7 +8,7 @@ import MatchedDog from './MatchedDog';
 import styled from 'styled-components';
 
 const ButtonStyled = styled(Button)`
-  background-color: #fff8dc !important;
+  background-color: #fbeaa6 !important;
   color: black !important;
   padding: 10px 20px;
   border: none;
@@ -20,7 +20,7 @@ const ButtonStyled = styled(Button)`
 const AutocompleteStyled = styled(Autocomplete)`
   margin-right: 10px;
   width: 200px;
-  background-color: #fff8dc !important;
+  background-color: #fbeaa6 !important;
 `;
 
 const Container = styled.div`
