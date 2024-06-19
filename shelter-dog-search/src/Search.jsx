@@ -5,7 +5,6 @@ import SearchDogs from './SearchDogs'
 const Search = () =>{
   const [authenticated, setAuthenticated] = useState(false);
   const [availableBreeds, setAvailableBreeds] = useState([]);
-  console.log('auth', authenticated)
 
   return (
     <>
