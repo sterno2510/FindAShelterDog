@@ -20,7 +20,7 @@ const ButtonStyled = styled(Button)`
 const AutocompleteStyled = styled(Autocomplete)`
   margin-right: 10px;
   width: 200px;
-  background-color: #fff8dc;
+  background-color: #fff8dc !important;
 `;
 
 const Container = styled.div`

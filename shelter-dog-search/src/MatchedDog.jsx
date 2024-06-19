@@ -10,7 +10,7 @@ const DogDetailsContainer = styled.div`
 `;
 
 const DogCard = styled.div`
-  background-color: #f9f9f9;
+  background-color: #f9f9f9 !important;
   border: ${({ $favorited }) => ($favorited ? '3px solid #ffcc00' : '1px solid #ddd')};
   border-radius: 8px;
   padding: 16px;

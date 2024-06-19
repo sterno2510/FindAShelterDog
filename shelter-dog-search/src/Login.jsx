@@ -7,7 +7,7 @@ const ContainerStyled = styled.div`
   border-radius: 15px;
   padding: 20px;
   margin: 20px;
-  background-color: #fff8dc;
+  background-color: #fff8dc !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ const ButtonStyled = styled.button`
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #8B4513;
+  background-color: #8B4513 !important;
   color: white;
   border: none;
   border-radius: 5px;
