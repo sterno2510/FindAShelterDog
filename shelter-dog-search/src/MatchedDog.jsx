@@ -11,7 +11,7 @@ const DogDetailsContainer = styled.div`
 
 const DogCard = styled.div`
   background-color: #f9f9f9;
-  border: ${({ favorited }) => (favorited === 'true' ? '3px solid #ffcc00' : '1px solid #ddd')};
+  border: ${({ $favorited }) => ($favorited ? '3px solid #ffcc00' : '1px solid #ddd')};
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -24,6 +24,7 @@ const DogCard = styled.div`
   width: 90%;
   max-width: 800px;
 `;
+
 const DogDetail = styled.p`
   margin: 8px 0;
 `;
@@ -40,7 +41,7 @@ const MatchedDog = ({ matchedDog }) => {
     <>
       <h1>Here is your Match!</h1>
       <DogDetailsContainer>
-        <DogCard>
+        <DogCard $favorited={matchedDog.favorited}>
           <DogImageStyled src={matchedDog.img} />
           <DogDetail><strong>Name:</strong> {matchedDog.name}</DogDetail>
           <DogDetail><strong>Age:</strong> {matchedDog.age}</DogDetail>

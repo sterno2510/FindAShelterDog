@@ -20,7 +20,7 @@ const DogDetailsContainer = styled.div`
 
 const DogCard = styled.div`
   background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  border: ${({ $favorited }) => ($favorited ? '3px solid #ffcc00' : '1px solid #ddd')};
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -29,7 +29,6 @@ const DogCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  border: ${({ favorited }) => (favorited === 'true' ? '3px solid #ffcc00' : '1px solid #ddd')};
 `;
 
 const DogDetail = styled.p`
@@ -45,7 +44,6 @@ const DogImageStyled = styled.img`
 
 const DogDetails = ({ dogIDs, setFavoriteDogs, favoriteDogs }) => {
   const [dogDetails, setDogDetails] = useState(null);
-
 
   useEffect(() => {
     const baseUrl = 'https://frontend-take-home-service.fetch.com';
@@ -73,21 +71,18 @@ const DogDetails = ({ dogIDs, setFavoriteDogs, favoriteDogs }) => {
     <FrameContainer>
       <DogDetailsContainer>
         {dogDetails && dogDetails.map((dog) => (
-          <>
           <DogCard
             key={dog.id}
             onClick={() => toggleFavoriteDog(dog.id)}
-            favorited={favoriteDogs.includes(dog.id)}
-            >
+            $favorited={favoriteDogs.includes(dog.id)}
+          >
             <DogImageStyled src={dog.img} />
             <DogDetail><strong>Name:</strong> {dog.name}</DogDetail>
             <DogDetail><strong>Age:</strong> {dog.age}</DogDetail>
             <DogDetail><strong>Breed:</strong> {dog.breed}</DogDetail>
             <DogDetail><strong>Zip Code:</strong> {dog.zip_code}</DogDetail>
           </DogCard>
-            </>
         ))}
-
       </DogDetailsContainer>
     </FrameContainer>
   );
